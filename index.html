@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sejal Birthday</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Poppins:wght@400;600&display=swap"
+        rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+    <style>
+        /* The CSS styles remain the same as the last version */
+        #note-scroll-container {
+            max-height: 350px; 
+            overflow-y: auto;
+            padding-right: 15px;
+            scroll-behavior: smooth;
+        }
+        #note-scroll-container h2 {
+            font-size: 16px;
+            line-height: 1.7;
+            font-weight: 500;
+            color: #444;
+            padding-bottom: 10px;
+            margin: 0;
+        }
+        #note-scroll-container::-webkit-scrollbar { width: 8px; }
+        #note-scroll-container::-webkit-scrollbar-track { background: #fde0e0; border-radius: 10px; }
+        #note-scroll-container::-webkit-scrollbar-thumb { background-color: #f75c92; border-radius: 10px; border: 2px solid #fde0e0; }
+        #surprise-btn {
+            display: block;
+            margin: 15px auto 10px auto;
+            padding: 12px 28px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            color: white;
+            background: linear-gradient(45deg, #ff6b6b, #f74283);
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            white-space: nowrap;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-20px);
+            transition: all 0.5s ease;
+        }
+        #surprise-btn:hover {
+            transform: translateY(-2px) scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="flag__birthday">
+            <img src="./images/1.png" alt="" width="350" class="flag__left">
+            <img src="./images/1.png" alt="" width="350" class="flag__right">
+        </div>
+        <div class="content">
+            <div class="left">
+                <div class="title">
+                    <h1 class="happy">
+                        <span style="--t: 4s;">H</span><span style="--t: 4.2s;">a</span><span style="--t: 4.4s;">p</span><span style="--t: 4.6s;">p</span><span style="--t: 4.8s;">y</span>
+                    </h1>
+                    <h1 class="birthday">
+                        <span style="--t: 5s;">B</span><span style="--t: 5.2s;">i</span><span style="--t: 5.4s;">r</span><span style="--t: 5.6s;">t</span><span style="--t: 5.8s;">h</span><span style="--t: 6s;">d</span><span style="--t: 6.2s;">a</span><span style="--t: 6.4s;">y</span>
+                    </h1>
+                    <div class="hat">
+                        <img src="./images/hat.png" alt="" width="130">
+                    </div>
+                </div>
+                <div class="date__of__birth">
+                    <span></span>
+                </div>
+                <div class="btn">
+                    <button id="btn__letter">
+                        <div class="mail">
+                            Click Here Sejal
+                            <i class="fa-regular fa-envelope"></i>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="right">
+                <div class="box__account">
+                    <div class="image">
+                        <img src="./images/unnamed.png" alt="">
+                    </div>
+                    <div class="name">
+                        <i class="fa-solid fa-heart"></i>
+                        <span>Dear SEJAL</span>
+                        <i class="fa-solid fa-heart"></i>
+                    </div>
+                    <div class="balloon_one">
+                        <img width="100px" src="./images/balloon1.png" alt="">
+                    </div>
+                    <div class="balloon_two">
+                        <img width="100px" src="./images/balloon2.png" alt="">
+                    </div>
+                </div>
+                <div class="cricle">
+                    <div class="text__cricle">
+                        <span style="--i: 1;">h</span><span style="--i: 2;">a</span><span style="--i: 3;">p</span><span style="--i: 4;">p</span><span style="--i: 5;">y</span><span style="--i: 6;">-</span><span style="--i: 7;">b</span><span style="--i: 8;">i</span><span style="--i: 9;">r</span><span style="--i: 10;">t</span><span style="--i: 11;">h</span><span style="--i: 12;">d</span><span style="--i: 13;">a</span><span style="--i: 14;">y</span><span style="--i: 15;">-</span>
+                    </div>
+                    <i class="fa-solid fa-heart"></i>
+                </div>
+            </div>
+        </div>
+        <div class="decorate_star star1" style="--t: 15s;"></div>
+        <div class="decorate_star star2" style="--t: 15.2s;"></div>
+        <div class="decorate_star star3" style="--t: 15.4s;"></div>
+        <div class="decorate_star star4" style="--t: 15.6s;"></div>
+        <div class="decorate_star star5" style="--t: 15.8s;"></div>
+        <div class="decorate_flower--one" style="--t: 15s;">
+            <img width="20" src="./images/decorate_flower.png" alt="">
+        </div>
+        <div class="decorate_flower--two" style="--t: 15.3s;">
+            <img width="20" src="./images/decorate_flower.png" alt="">
+        </div>
+        <div class="decorate_flower--three" style="--t: 15.6s;">
+            <img width="20" src="./images/decorate_flower.png" alt="">
+        </div>
+        <div class="decorate_bottom">
+            <img src="./images/decorate.png" alt="" width="100">
+        </div>
+        <div class="smiley__icon">
+            <img src="./images/smiley_icon.png" alt="" width="100">
+        </div>
+
+        <div class="boxMail">
+            <i class="fa-solid fa-xmark"></i>
+            <div class="boxMail-container">
+                <div class="card1">
+                    <div class="userImg">
+                        <img src="images/unnamed.png" alt="">
+                    </div>
+                    <h4 class="username">To: SEJAL  💖<span class="underline"></span></h4>
+                    <h3>Happy Birthday SEJAL</h3>
+                    <div class="imageCute">
+                        <img src="cute1.png" alt="">
+                    </div>
+                </div>
+                <div class="card2">
+                    <div class="card2-content">
+                        <div id="note-scroll-container">
+                            <h3>For my sejal</h3>
+                            <h2>
+                                Keep smiling 🙂 "For My Dearest JAAN JII ♡"<br>
+                                My Dearest Jaan Jii. You are my life, my everything. Today 15th september my life's most important day. Jaan me. Because Today you came into this world and then into Jaan "MY HEARTBEAT ♡" my life.<br><br>
+                                Jaan aap meri life me aaye mujhe pyar kiya. Ye mere liye ek bahut achievement hai jaan aapne mujhe chaha mujhe pyar kiya.<br>
+                                Thank you, Thank so much Jaan.<br>
+                                Jaan aap mere liye sabse special or most important person ho.<br>
+                                Mai aapko kabhi khona nahi chahti jaan jii. Mujhe bas aapka hokar, aapke sath puri jindagi jeeni hai. Aapke sath ye duniya dekhni hai.<br>
+                                Jaan kabhi ham ek-dusare se anjan the but ab ek-dusare ke bina sans bhi nahi lena chahate. Ab to ek pal bhi jiya nahi jata aapke bina aapko dekhne ke liye ye aankhe bahut tarsi hai jaan. Aapki yaade jaan leti hai jaan. kabhi aankhe band karke aapko yaad karu to aankho me aansu aa jate hai but hontho par ek muskan bhi saji pusani yaade sab samne aa jate hai or abhi aap mere itane karib ho gaye ho ki agar ab dur gaye to sayad mai.<br><br>kabhi kisi ke karib na ho pau.
+Jaan aapko pata hai meri salo ki mannate, duaye sab puri ho gayi or mai bahut jyada khush hu. I think ki aap bhi bahut khush hoge but aapka past aapko sad karita hai jo ham dono ko hurt karita hai please Jaan.
+Aap mere se ek promise karo ki problem kuch bhi ho situation kuch bhi ho aap mujhe sab bataoge aap kisi bhi situation me akele nahi rahoge, kuch bhi akele nahi sahoge promise kariye mere se please Jaan Jii.
+Jaan mujhe aapki khushiya chahiye. Aap vo sab karo jisse aapko khushi mile mai aapko kabhi kisi chiz ke liye mana nahi karungi but us chiz se aap sad na ho jisme aap dil se khush ho vahi karna jisse aapko mentally or physically koi problem na ho please.
+Mai aapko khud se jyada successful dekhna chahati hu jaan or hamesha khush.
+♡ PLEASE ALWAYS BE HAPPY JAAN ♡
+HAPPY BIRTHDAY MERI JAAN
+♡ (SUKOON) 😇
+                            </h2>
+                        </div>
+                        <button id="surprise-btn">Click For a Surprise!</button>
+                        <div class="imageCute2">
+                            <img src="cute2.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script>
+    let datetxt = "15 SEPTEMBER";
+    let charArrDate = datetxt.split('');
+    let currentIndex = 0;
+    let date__of__birth = document.querySelector(".date__of__birth span");
+
+    // ================================================================= //
+    // ==== THIS IS THE PART I FIXED ==== //
+    // ================================================================= //
+    
+    // The delay was changed from 12000 (12 seconds) to 2000 (2 seconds)
+    setTimeout(function () {
+        let timeDatetxt = setInterval(function () {
+            if (currentIndex < charArrDate.length) {
+                date__of__birth.textContent += charArrDate[currentIndex];
+                currentIndex++;
+            }
+            else {
+                let i = document.createElement("i");
+                i.className = "fa-solid fa-star"
+                document.querySelector(".date__of__birth").prepend(i)
+                document.querySelector(".date__of__birth").appendChild(i.cloneNode(true))
+                clearInterval(timeDatetxt)
+            }
+        }, 100)
+    }, 2000) // <-- FIXED DELAY HERE
+
+    // The rest of your original script
+    let mailBox = document.querySelector('.mail')
+    let boxmail = document.querySelector('.boxMail')
+    var close = document.querySelector('.fa-xmark')
+    mailBox.onclick = function () {
+        mailBox.classList.toggle('active')
+        boxmail.classList.add('active')
+    }
+    close.addEventListener('click', function () {
+        boxmail.classList.remove('active')
+    })
+    
+    // Script for the surprise button
+    const noteScrollContainer = document.getElementById('note-scroll-container');
+    const surpriseBtn = document.getElementById('surprise-btn');
+
+    if (noteScrollContainer && surpriseBtn) {
+        noteScrollContainer.addEventListener('scroll', function() {
+            const isAtBottom = noteScrollContainer.scrollTop + noteScrollContainer.clientHeight >= noteScrollContainer.scrollHeight - 5;
+            if (isAtBottom) {
+                surpriseBtn.style.opacity = '1';
+                surpriseBtn.style.visibility = 'visible';
+                surpriseBtn.style.transform = 'translateY(0)';
+            } else {
+                surpriseBtn.style.opacity = '0';
+                surpriseBtn.style.visibility = 'hidden';
+                surpriseBtn.style.transform = 'translateY(-20px)';
+            }
+        });
+        surpriseBtn.addEventListener('click', function() {
+            window.open(' https://dark009-cyber.github.io/sejal010/', '_blank');
+        });
+    }
+</script>
+
+</html>
